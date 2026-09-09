@@ -16,6 +16,7 @@
    ========================================================================== */
 
 :root{
+  color-scheme: light dark;
   /* --- type scale ------------------------------------------------------ */
   --ts: 1;                                   /* Dynamic Type multiplier */
   --f-sys: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -98,6 +99,7 @@
 }
 /* explicit dark override wins in both directions */
 :root[data-theme="dark"]{
+  color-scheme: dark;
   --bg:#000000; --surface:#1c1c1e; --surface-2:#242426; --surface-3:#2c2c2e;
   --chrome: rgba(28,28,30,.76); --sidebar: rgba(24,24,26,.80); --overlay: rgba(0,0,0,.55);
   --label:#ffffff; --label-2:rgba(235,235,245,.66); --label-3:rgba(235,235,245,.42);
