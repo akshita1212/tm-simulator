@@ -33,7 +33,27 @@ Everything lives in `tm-simulator.html`:
 | `AUTHORED` | Hand-authored deep cases, each with a full ledger, KYC record, progressive-disclosure investigation actions and a written model disposition |
 | Ledger composer | Turns compact case seeds into dated, balanced transaction ledgers from declarative segments |
 | Case builder | Expands a seed into alert, Customer 360, counterparties, beneficiaries, relationship graph, evidence and investigation actions |
-| `SEEDS` | The case library |
+| `SEEDS` | The case library — 92 seeds expanded by the builder, plus the 8 hand-authored cases |
+
+### The case library
+
+100 curated core cases, all reachable from the Training screen:
+
+| | Count |
+|---|---|
+| Documented basis (derived from published enforcement actions) | 50 |
+| Fictional (written for the simulator) | 50 |
+| Level 1 · Junior / 2 · Analyst / 3 · Intermediate / 4 · Senior / 5 · Expert | 20 / 25 / 25 / 20 / 10 |
+| Supported outcome — escalate / enhanced due diligence / close | 55 / 20 / 25 |
+
+A quarter of the library is legitimate activity a monitoring engine cannot distinguish from
+laundering without investigation — property purchases, inheritances, business sales, family
+transfers, investment proceeds, education payments, seasonal trade, charitable and humanitarian
+operations. Learning that **unusual is not the same as suspicious** is the point of those cases.
+
+Beyond the core library, the generator produces unlimited practice cases from combinations of
+customer profile, product, geography, transaction pattern, counterparty network, typology,
+explanation and evidence.
 | Engine | Adaptive case selection, QA scoring rubric, unlimited practice-case generator |
 | Views | Dashboard, Alert Queue, My Investigations, Customer 360, Transaction Search, Entity Search, Case Management, Investigation Notes, Evidence & Documents, Escalations, QA Review, Performance, Training |
 
