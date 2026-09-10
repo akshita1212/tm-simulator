@@ -3,7 +3,9 @@
 A single-file, dependency-free web application that simulates working inside a financial
 institution's transaction monitoring and AML investigations department.
 
-Open `tm-simulator.html` in any modern browser. No build step, no server, no network calls.
+Open `index.html` in any modern browser. No build step, no server, no network calls.
+It is a static page, so it also deploys as-is to Vercel, Netlify or GitHub Pages with no
+configuration — the file is named `index.html` so that the site root serves it.
 
 > **This is a training simulation.** Every customer, counterparty, account number, transaction
 > and document in the application is fictional. Cases marked *documented basis* take their
@@ -24,7 +26,7 @@ It is not a quiz. The system never states a conclusion; the analyst has to reach
 
 ## Structure
 
-Everything lives in `tm-simulator.html`:
+Everything lives in `index.html`:
 
 | Section | Contents |
 |---|---|
@@ -75,6 +77,15 @@ The file is assembled from parts during development but ships as one file. To ve
 script after editing:
 
 ```sh
-python3 -c "s=open('tm-simulator.html').read(); i=s.index('<script>')+8; j=s.rindex('</script>'); open('/tmp/_c.js','w').write(s[i:j])"
+python3 -c "s=open('index.html').read(); i=s.index('<script>')+8; j=s.rindex('</script>'); open('/tmp/_c.js','w').write(s[i:j])"
 node --check /tmp/_c.js
 ```
+
+## Deploying
+
+The repository is a single static page with no dependencies, so any static host serves it
+directly from the repository root with no build command and no framework preset:
+
+- **Vercel** — import the repo, framework preset *Other*, leave build and output settings empty.
+- **Netlify** — no build command, publish directory `.`.
+- **GitHub Pages** — Settings → Pages → deploy from branch, root.
