@@ -1,0 +1,129 @@
+/* ==========================================================================
+   CamelAML design tokens
+   Brand: Inter · Camel near-black + AML warm gold · off-white ground.
+   Text steps are contrast-checked against their surfaces:
+     --gold-ink  #8C6224 on off-white 5.0:1   (brand #C9974A is 2.55:1 — marks only)
+     --ink-2     #66655F on off-white 5.4:1   (brand gray #8A8A87 is 3.2:1 — large/decorative only)
+     --gold-mark #B0823A on white   ≥ 3:1     (chart emphasis marks)
+   On the dark sidebar the brand gray (5.7:1) and brand gold (7.5:1) pass as-is.
+   ========================================================================== */
+:root{
+  color-scheme: light;
+  --ts: 1;
+
+  --font: "Inter Variable", "Inter", "SF Pro Display", "SF Pro Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* brand */
+  --brand-gold:   #C9974A;
+  --brand-gold-2: #E2B96F;
+  --brand-ink:    #111111;
+  --brand-night:  #0B0B0C;
+  --brand-paper:  #F7F6F2;
+  --brand-gray:   #8A8A87;
+
+  /* frame — the dark chrome the content panel sits in */
+  --frame:        #0B0B0C;
+  --side-ink:     #F7F6F2;
+  --side-ink-2:   #8A8A87;
+  --side-line:    rgba(255,255,255,.07);
+  --side-hover:   rgba(255,255,255,.06);
+  --side-active:  rgba(201,151,74,.16);
+  --side-field:   rgba(255,255,255,.05);
+
+  /* content surfaces */
+  --bg:           #F7F6F2;
+  --surface:      #FFFFFF;
+  --surface-2:    #FBFAF7;
+  --surface-3:    #F2F0EA;
+  --feature:      #111111;
+  --feature-ink:  #F7F6F2;
+  --feature-ink-2:#A6A5A1;
+  --overlay:      rgba(11,11,12,.42);
+
+  /* ink */
+  --ink:          #111111;
+  --ink-2:        #66655F;
+  --ink-3:        #8A8A87;
+  --ink-4:        #B9B8B3;
+  --line:         rgba(17,17,17,.07);
+  --line-2:       rgba(17,17,17,.12);
+  --fill:         rgba(17,17,17,.04);
+  --fill-2:       rgba(17,17,17,.07);
+  /* aliases used by the graph and case views */
+  --label:var(--ink); --label-2:var(--ink-2); --label-3:var(--ink-3); --label-4:var(--ink-4);
+  --separator:var(--line-2); --t-head:.875rem; --t-foot:.75rem;
+
+  /* accent */
+  --gold:         #C9974A;
+  --gold-mark:    #B0823A;
+  --gold-ink:     #8C6224;
+  --gold-tint:    #F5EAD6;
+  --gold-tint-2:  #FBF4E8;
+  --gold-line:    rgba(201,151,74,.35);
+  --on-gold:      #111111;
+
+  /* status — reserved; always shipped with a word or glyph */
+  --red:#B42318;    --red-bg:#FDEDEB;
+  --orange:#B54708; --orange-bg:#FEF3E2;
+  --green:#067647;  --green-bg:#E7F6EE;
+  --blue:#1F58C9;   --blue-bg:#EDF3FE;
+  --purple:#6941C6; --purple-bg:#F2EEFD;
+  --teal:#0E6F8A;   --teal-bg:#E8F5F9;
+  --brown:#8C6224;  --brown-bg:#F5EAD6;
+
+  /* chart */
+  --mk-base:      #E4E1D9;
+  --mk-base-hover:#D4D0C6;
+
+  /* shape */
+  --r-xs:6px; --r-sm:8px; --r-md:12px; --r-lg:16px; --r-xl:20px; --r-2xl:24px;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px; --s6:24px; --s8:32px; --s10:40px;
+  --shadow-1: 0 1px 2px rgba(17,17,17,.04);
+  --shadow-2: 0 6px 24px rgba(17,17,17,.06), 0 1px 2px rgba(17,17,17,.04);
+  --shadow-3: 0 24px 64px rgba(11,11,12,.22), 0 2px 6px rgba(11,11,12,.08);
+  --ease: cubic-bezier(.2,.8,.2,1);
+
+  --side-w: 264px;
+}
+
+/* dark appearance — follows the system unless the user chose light */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --frame:#050506; --side-hover:rgba(255,255,255,.05); --side-field:rgba(255,255,255,.04);
+    --bg:#0E0E10; --surface:#151518; --surface-2:#1A1A1E; --surface-3:#202025;
+    --feature:#221D15; --feature-ink:#F7F6F2; --feature-ink-2:#A6A5A1; --overlay:rgba(0,0,0,.6);
+    --ink:#F4F3EF; --ink-2:#A9A8A3; --ink-3:#8A8A87; --ink-4:#55554F;
+    --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.12);
+    --fill:rgba(255,255,255,.04); --fill-2:rgba(255,255,255,.08);
+    --gold-mark:#C9974A; --gold-ink:#E2B96F; --gold-tint:rgba(201,151,74,.14); --gold-tint-2:rgba(201,151,74,.08);
+    --red:#F97066; --red-bg:rgba(240,68,56,.14); --orange:#FDB022; --orange-bg:rgba(247,144,9,.14);
+    --green:#47CD89; --green-bg:rgba(23,178,106,.14); --blue:#84ADFF; --blue-bg:rgba(41,112,255,.16);
+    --purple:#B692F6; --purple-bg:rgba(122,90,248,.16); --teal:#67D5EF; --teal-bg:rgba(21,176,217,.14);
+    --brown:#E2B96F; --brown-bg:rgba(201,151,74,.14);
+    --mk-base:#2E2E33; --mk-base-hover:#3A3A40;
+    --shadow-1: 0 1px 2px rgba(0,0,0,.4); --shadow-2: 0 8px 28px rgba(0,0,0,.45);
+    --shadow-3: 0 24px 64px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --frame:#050506; --side-hover:rgba(255,255,255,.05); --side-field:rgba(255,255,255,.04);
+  --bg:#0E0E10; --surface:#151518; --surface-2:#1A1A1E; --surface-3:#202025;
+  --feature:#221D15; --feature-ink:#F7F6F2; --feature-ink-2:#A6A5A1; --overlay:rgba(0,0,0,.6);
+  --ink:#F4F3EF; --ink-2:#A9A8A3; --ink-3:#8A8A87; --ink-4:#55554F;
+  --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.12);
+  --fill:rgba(255,255,255,.04); --fill-2:rgba(255,255,255,.08);
+  --gold-mark:#C9974A; --gold-ink:#E2B96F; --gold-tint:rgba(201,151,74,.14); --gold-tint-2:rgba(201,151,74,.08);
+  --red:#F97066; --red-bg:rgba(240,68,56,.14); --orange:#FDB022; --orange-bg:rgba(247,144,9,.14);
+  --green:#47CD89; --green-bg:rgba(23,178,106,.14); --blue:#84ADFF; --blue-bg:rgba(41,112,255,.16);
+  --purple:#B692F6; --purple-bg:rgba(122,90,248,.16); --teal:#67D5EF; --teal-bg:rgba(21,176,217,.14);
+  --brown:#E2B96F; --brown-bg:rgba(201,151,74,.14);
+  --mk-base:#2E2E33; --mk-base-hover:#3A3A40;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.4); --shadow-2: 0 8px 28px rgba(0,0,0,.45);
+  --shadow-3: 0 24px 64px rgba(0,0,0,.6);
+}
+@media (prefers-contrast: more){
+  :root{ --ink-2:#4A4944; --line:rgba(17,17,17,.16); --line-2:rgba(17,17,17,.26); }
+}

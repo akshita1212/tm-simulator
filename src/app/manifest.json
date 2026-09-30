@@ -1,0 +1,26 @@
+{
+  "_comment": "Load order for the application scope. These files share one module scope and are compiled into a single ES module by the camelaml-app plugin in vite.config.js. Order matters only for top-level const/let used at load time.",
+  "files": [
+    "engine/core.js",
+    "cases/authored.js",
+    "engine/ledger.js",
+    "engine/builder.js",
+    "engine/derive.js",
+    "engine/adapt.js",
+    "cases/documented.js",
+    "cases/fictional.js",
+    "engine/state.js",
+    "engine/scoring.js",
+    "ui/icons.js",
+    "ui/charts.js",
+    "ui/components.js",
+    "ui/views-home.js",
+    "ui/views-customer-ledger.js",
+    "ui/views-entities.js",
+    "ui/views-case.js",
+    "ui/views-decision.js",
+    "ui/views-oversight.js",
+    "ui/palette.js",
+    "ui/router.js"
+  ]
+}
